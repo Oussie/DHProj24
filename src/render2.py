@@ -3,7 +3,6 @@ import numpy as np
 import os
 from assets import AssetManager
 
-print(os.getcwd())
 
 # Initialize Pygame
 pygame.init()
@@ -15,6 +14,7 @@ screen_width = GRID_SIZE * TILE_SIZE
 screen_height = GRID_SIZE * TILE_SIZE
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Grid of Images")
+AssetManager.load()
 screen.fill((0, 0, 0))
 
 # Load the image to use as a tile
