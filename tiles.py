@@ -10,8 +10,8 @@ class _TileManager:
         return self.tiles[str(tile_id)]
         #Get tile from json
 
-    def num_tiles(self):
-        return len(self.tiles)
+    def get_ids(self):
+        return list(self.tiles.keys())
     
 TileManager = _TileManager()  
 if __name__ == "__main__":
