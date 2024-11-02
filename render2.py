@@ -5,7 +5,6 @@ from assets import AssetManager
 from random import randint
 from tiles import TileManager
 
-
 # Initialize Pygame
 pygame.init()
 
@@ -19,15 +18,14 @@ pygame.display.set_caption("Grid of Images")
 AssetManager.load()
 screen.fill((0, 0, 0))
 
-arr = [[randint(1,15) for i in range(80)] for j in range(80)]
+arr = [[randint(1,24) for i in range(80)] for j in range(80)]
+
 # Main loop
 running = True
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False    
-
-    
 
     # Draw the grid using blit
     for y,row in enumerate(arr):
