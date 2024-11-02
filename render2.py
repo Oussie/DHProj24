@@ -2,6 +2,8 @@ import pygame
 import numpy as np
 import os
 from assets import AssetManager
+from random import randint
+from tiles import TileManager
 
 
 # Initialize Pygame
@@ -17,14 +19,7 @@ pygame.display.set_caption("Grid of Images")
 AssetManager.load()
 screen.fill((0, 0, 0))
 
-# Load the image to use as a tile
-#tile_image = pygame.image.load("/Users/oscarlihou-smith/Desktop/durhack/DHProj24/src/test_texture.jpg")
-#JOES OUTPUT
-
-# Generate a 64x64 grid with random numbers from 1 to 5
-#matrix = np.random.randint(1, 6, size=(GRID_SIZE, GRID_SIZE))
-#JOHNNYS OUTPUT
-
+arr = [[randint(1,15) for i in range(80)] for j in range(80)]
 # Main loop
 running = True
 while running:
@@ -32,19 +27,18 @@ while running:
         if event.type == pygame.QUIT:
             running = False    
 
+    
+
     # Draw the grid using blit
-    for row in range(GRID_SIZE):
-        for col in range(GRID_SIZE):
-            # Calculate position
-            x = col * TILE_SIZE
-            y = row * TILE_SIZE
+    for y,row in enumerate(arr):
+        for x,id in enumerate(row):
+            index = TileManager.get(id)["index"]
+            tile = AssetManager.get(*index)
 
-
-            
-            tile = AssetManager.get(0,16)
+            print(index)
 
             # Blit the image at the calculated position
-            screen.blit(tile, (x, y))
+            screen.blit(tile, (x*TILE_SIZE, y*TILE_SIZE))
 
     # Update display
     pygame.display.flip()

@@ -14,7 +14,7 @@ class _AssetManager:
     def get(self, x, y):
         if not self.surface:
             raise RuntimeError("Surface not loaded. Call load() after Pygame display is set.")
-        square = pygame.Rect(x, y, 16, 16)
+        square = pygame.Rect(x*16, y*16, 16, 16)
         sub_surface = self.surface.subsurface(square)
         return sub_surface
 

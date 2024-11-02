@@ -1,3 +1,3 @@
-from src.render import render
+from render import render
 
 render()
