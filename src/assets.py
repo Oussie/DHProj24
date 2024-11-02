@@ -1,6 +1,6 @@
 import pygame
 
-class AssetManager:
+class _AssetManager:
 
     def __init__(self):
         pygame.init()
@@ -10,3 +10,5 @@ class AssetManager:
         square = pygame.Rect(x, y, 16, 16)
         sub_surface = self.surface.subsurface(square)
         return sub_surface
+    
+AssetManager = _AssetManager()
