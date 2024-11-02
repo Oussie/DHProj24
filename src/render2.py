@@ -25,8 +25,6 @@ screen.fill((0, 0, 0))
 #matrix = np.random.randint(1, 6, size=(GRID_SIZE, GRID_SIZE))
 #JOHNNYS OUTPUT
 
-am = AssetManager()
-
 # Main loop
 running = True
 while running:
@@ -41,7 +39,9 @@ while running:
             x = col * TILE_SIZE
             y = row * TILE_SIZE
 
-            tile = am.get(0,16)
+
+            
+            tile = AssetManager.get(0,16)
 
             # Blit the image at the calculated position
             screen.blit(tile, (x, y))
