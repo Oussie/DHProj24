@@ -1,0 +1,65 @@
+{
+  "1": {
+    "north": [],
+    "south": [],
+    "east": [],
+    "west": [],
+    "index": [0, 0]
+  },
+  "2": {
+    "north": [],
+    "south": [],
+    "east": [],
+    "west": [],
+    "index": [0, 1]
+  },
+  "3": {
+    "north": [],
+    "south": [],
+    "east": [],
+    "west": [],
+    "index": [0, 2]
+  },
+  "4": {
+    "north": [],
+    "south": [],
+    "east": [],
+    "west": [],
+    "index": [1, 0]
+  },
+  "5": {
+    "north": [],
+    "south": [],
+    "east": [],
+    "west": [],
+    "index": [1, 1]
+  },
+  "6": {
+    "north": [],
+    "south": [],
+    "east": [],
+    "west": [],
+    "index": [1, 2]
+  },
+  "7": {
+    "north": [],
+    "south": [],
+    "east": [],
+    "west": [],
+    "index": [2, 0]
+  },
+  "8": {
+    "north": [],
+    "south": [],
+    "east": [],
+    "west": [],
+    "index": [2, 1]
+  },
+  "9": {
+    "north": [],
+    "south": [],
+    "east": [],
+    "west": [],
+    "index": [2, 2]
+  }
+}
