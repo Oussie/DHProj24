@@ -9,7 +9,7 @@ class _AssetManager:
 
     def load(self):
         # Load image here after display is set
-        self.surface = pygame.image.load('../assets/tileset.png').convert()
+        self.surface = pygame.image.load('assets/tileset.png').convert()
 
     def get(self, x, y):
         if not self.surface:
