@@ -8,7 +8,7 @@ from generation import generate
 from render import render
 
 #DEBUG
-GENERATE_CLOUDS = True
+ALPHA = 50
 # Initialize Pygame
 pygame.init()
 
@@ -25,7 +25,7 @@ Cloud.load()
 screen.fill((0, 0, 0))
 
 world_arr = generate((GRID_SIZE, GRID_SIZE))
-cloud_arr = np.full((GRID_SIZE, GRID_SIZE), 255, dtype=np.int16)
+cloud_arr = np.full((GRID_SIZE, GRID_SIZE), ALPHA, dtype=np.int16)
 
 s=0.5 #GLOBAL ALERT
 # Main loop - away from here
@@ -43,7 +43,7 @@ while running:
             cloud_arr[j][i] -= int(max(0,(RADIUS*TILE_SIZE - distance)*s))
             cloud_arr[j][i] = min(255,max(0, cloud_arr[j][i]))
 
-    render(screen, world_arr, cloud_arr if GENERATE_CLOUDS else None)
+    render(screen, world_arr, cloud_arr )
 
     # Update display
     pygame.display.flip()
