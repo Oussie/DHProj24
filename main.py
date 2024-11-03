@@ -7,6 +7,8 @@ from tiles import TileManager
 from generation import generate
 from render import render
 
+#DEBUG
+GENERATE_CLOUDS = True
 # Initialize Pygame
 pygame.init()
 
@@ -41,7 +43,7 @@ while running:
             cloud_arr[j][i] -= int(max(0,(RADIUS*TILE_SIZE - distance)*s))
             cloud_arr[j][i] = min(255,max(0, cloud_arr[j][i]))
 
-    render(screen, world_arr, cloud_arr)
+    render(screen, world_arr, cloud_arr if GENERATE_CLOUDS else None)
 
     # Update display
     pygame.display.flip()

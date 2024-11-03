@@ -21,5 +21,7 @@ def renderCloud(screen, cloud_arr):
             # Blit the image at the calculated position
             screen.blit(tile, (x*TILE_SIZE, y*TILE_SIZE))
 def render(screen,world_arr, cloud_arr):
-    renderWorld(screen, world_arr)
-    renderCloud(screen, cloud_arr)
+    if (world_arr):
+        renderWorld(screen, world_arr)
+    if (cloud_arr):
+        renderCloud(screen, cloud_arr)
