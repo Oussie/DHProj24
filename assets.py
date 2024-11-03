@@ -42,9 +42,9 @@ class _Cloud:
         
 
         cloud_colour = (
-            random.randint(240, 255), 
-            random.randint(240, 255),
-            random.randint(240, 255),
+            random.randint(245, 255), 
+            random.randint(245, 255),
+            random.randint(245, 255),
             alpha,
         )
                 

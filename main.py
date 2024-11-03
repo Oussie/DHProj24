@@ -12,6 +12,9 @@ ALPHA = 300
 # Initialize Pygame
 pygame.init()
 
+clock = pygame.time.Clock()
+FPS = 15
+
 # Set up display
 GRID_SIZE = 40  # 64x64 grid
 TILE_SIZE = 16  # Each image tile is 16x16 pixels
@@ -27,7 +30,7 @@ screen.fill((0, 0, 0))
 world_arr = generate((GRID_SIZE, GRID_SIZE))
 cloud_arr = np.full((GRID_SIZE, GRID_SIZE), ALPHA, dtype=np.int16)
 
-s=0.5 #GLOBAL ALERT
+s=1 #GLOBAL ALERT
 # Main loop - away from here
 running = True
 while running:
@@ -47,6 +50,8 @@ while running:
 
     # Update display
     pygame.display.flip()
+
+    clock.tick(FPS)
 
 # Quit Pygame
 pygame.quit()
