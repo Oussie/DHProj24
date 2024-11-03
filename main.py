@@ -7,8 +7,8 @@ from tiles import TileManager
 from generation import generate
 from render import render
 
-# DEBUG
-ALPHA = 50
+#DEBUG
+ALPHA = 300
 # Initialize Pygame
 pygame.init()
 
