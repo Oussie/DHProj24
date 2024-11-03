@@ -40,8 +40,8 @@ cloud_arr = np.full((GRID_SIZE, GRID_SIZE), ALPHA, dtype=np.int16)
 # BUTTON CODE####################################
 
 # Button settings
-RIGHT_BUTTON_POS = (330, 35)
-LEFT_BUTTON_POS = (270, 35)  
+RIGHT_BUTTON_POS = (630, 20)
+LEFT_BUTTON_POS = (570, 20)  
 RIGHT_BUTTON_RECT = pygame.Rect(RIGHT_BUTTON_POS[0] - 20, RIGHT_BUTTON_POS[1] - 10, 20, 20)
 LEFT_BUTTON_RECT = pygame.Rect(LEFT_BUTTON_POS[0], LEFT_BUTTON_POS[1] - 10, 20, 20)
 
