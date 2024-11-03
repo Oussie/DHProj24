@@ -8,7 +8,7 @@ from generation import generate
 from render import render
 
 #DEBUG
-ALPHA = 50
+ALPHA = 300
 # Initialize Pygame
 pygame.init()
 

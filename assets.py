@@ -1,6 +1,6 @@
 import pygame
 import os
-
+import random
 
 class _AssetManager:
     def __init__(self):
@@ -38,7 +38,17 @@ class _Cloud:
             raise RuntimeError(
                 "Surface not loaded. Call load() after Pygame display is set."
             )
-        self.surface.fill((255, 255, 255, alpha))
+    
+        
+
+        cloud_colour = (
+            random.randint(240, 255), 
+            random.randint(240, 255),
+            random.randint(240, 255),
+            alpha,
+        )
+                
+        self.surface.fill(cloud_colour)
         return self.surface
 
     def get_size(self):
