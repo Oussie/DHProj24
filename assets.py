@@ -23,5 +23,26 @@ class _AssetManager:
     def get_size(self):
         return self.tile_size
 
+class _Cloud:
+    def __init__(self):
+        # No need to initialize Pygame here, it's done in render2.py
+        self.surface = None
+        self.tile_size = 16
+    def load(self):
+        self.surface = self.image = pygame.Surface(
+            (self.tile_size, self.tile_size), pygame.SRCALPHA
+        )  # Transparent surface for the cloud
+        self.image.fill((255, 255, 255)) 
+    def get(self, alpha):
+        if not self.surface:
+            raise RuntimeError(
+                "Surface not loaded. Call load() after Pygame display is set."
+            )
+        self.surface.fill((255, 255, 255, alpha))
+        return self.surface
 
+    def get_size(self):
+        return self.tile_size
+    
 AssetManager = _AssetManager()
+Cloud = _Cloud()
