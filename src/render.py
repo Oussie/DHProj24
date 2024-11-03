@@ -1,5 +1,5 @@
-from tiles import TileManager
-from assets import AssetManager, Cloud
+from src.tiles import TileManager
+from src.assets import AssetManager, Cloud
 
 
 def renderWorld(screen, arr):

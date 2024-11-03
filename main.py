@@ -1,31 +1,25 @@
 import pygame
 import numpy as np
 import os
-from assets import AssetManager, Cloud
+from src.assets import AssetManager, Cloud
 from random import randint
-from tiles import TileManager
-from generation import generate
-from render import render
-
-#DEBUG
-ALPHA = 300
+from src.tiles import TileManager
+from src.generation import generate
+from src.render import render
+from settings import *
 # Initialize Pygame
 pygame.init()
 
 clock = pygame.time.Clock()
-FPS = 15
 
-# Set up display
-GRID_SIZE = 40  # 64x64 grid
-TILE_SIZE = 16  # Each image tile is 16x16 pixels
-RADIUS = 3  # Radius of the cloud
 screen_width = GRID_SIZE * TILE_SIZE
 screen_height = GRID_SIZE * TILE_SIZE
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Grid of Images")
+
 AssetManager.load()
 Cloud.load()
-screen.fill((0, 0, 0))
+screen.fill(BACKGROUND_COLOR) #Initialisation of board
 
 WORLD_POSITION = 0
 WORLDS_ARR = dict()

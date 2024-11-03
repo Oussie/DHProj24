@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Tuple, Set, List, Dict
 from dataclasses import dataclass, field
-from tiles import TileManager
+from src.tiles import TileManager
 import numpy as np
 import random
 import heapq
