@@ -22,7 +22,7 @@ class State:
   adjacent: Dict[Tile] = field(default_factory=dict)
 
 def generate(grid_size: Tuple[int, int]) -> np.ndarray:
-  world = np.zeros(grid_size)
+  world = np.zeros(grid_size, dtype=np.int16)
   
   stack: List[State] = []
   tiles: List[Tile] = []
